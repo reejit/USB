@@ -15,7 +15,7 @@ from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
 
 
-TOKEN		=		"YOUR BOT TOKEN"
+TOKEN		=		"<BOT TOKEN>" # Your Bot Token Here
 updater 	= 		Updater(token=TOKEN)
 dispatcher 	= 		updater.dispatcher
 
@@ -57,8 +57,10 @@ def SaveUserInformation(bot, update):
 	
 	
 def getCm(bot, update):
-
+	
 	try:
+		userMessage = update.message.text
+		
 		if UrlValidator(userMessage) == 0:
 			bot.sendMessage(chat_id=update.message.chat_id, text="Not Valid Url")
 		elif UrlValidator(userMessage) == 1:
@@ -66,7 +68,7 @@ def getCm(bot, update):
 		else:
 			bot.sendMessage(chat_id=update.message.chat_id, text="Url Not Worked.Please Send Health link.")
 	except:
-		bot.sendMessage(chat_id=update.message.chat_id, text="ConnectionErr: url not worked")
+		bot.sendMessage(chat_id=update.message.chat_id, text="ConnectionErr: Url Not Worked.Please Send Health link.")
 	
 	SaveUserInformation(bot, update)
  
@@ -87,7 +89,7 @@ def stop(bot, update):
 def help(bot, update):
 
 	bot.sendMessage(chat_id=update.message.chat_id, text="\nURL Shortener Bot\n[USAGE]:\nSend me a link e.g.(https://www.instagram.com/amro045/)\n")
-	SaveUserInformation(bot, update)
+	SaveUserInformation(bot, update)"
 	
 	
 start_handler = CommandHandler('start', start)
