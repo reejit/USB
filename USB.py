@@ -1,7 +1,7 @@
 '''
 Name			:			URL Shortener Bot
 Author			:			AmRo
-URL				:			Telegram->@AM_RO045	  |   Instagram->@AmRo045	
+URL			:			Telegram->@AM_RO045	  |   Instagram->@AmRo045	
 Created at		:			07:51 ‎11/‎02/‎1396
 
 '''
