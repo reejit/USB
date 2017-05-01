@@ -1,7 +1,7 @@
 '''
 Name			:			URL Shortener Bot
 Author			:			AmRo
-URL			:			Telegram->@AM_RO045  |   Instagram->@AmRo045	
+URL				:			Telegram->@AM_RO045	  |   Instagram->@AmRo045	
 Created at		:			07:51 ‎11/‎02/‎1396
 
 '''
@@ -77,19 +77,23 @@ dispatcher.add_handler(cm_handler)
 
 
 def start(bot, update):
-
-	bot.sendMessage(chat_id=update.message.chat_id, text="\nSend link to shortening\n")
+	Message = "\nSend link to shortening\n"
+	bot.sendMessage(chat_id=update.message.chat_id, text=Message)
 	SaveUserInformation(bot, update)
 	
 def stop(bot, update):
-	
-	bot.sendMessage(chat_id=update.message.chat_id, text="Bye")
+	Message = "Bye"
+	bot.sendMessage(chat_id=update.message.chat_id, text=Message)
 	SaveUserInformation(bot, update)
 	
 def help(bot, update):
-
-	bot.sendMessage(chat_id=update.message.chat_id, text="\nURL Shortener Bot\n[USAGE]:\nSend me a link e.g.(https://www.instagram.com/amro045/)\n")
-	SaveUserInformation(bot, update)"
+	Message = (
+			  "\nURL Shortener Bot"
+			  "\n[USAGE]:"
+			  "\nSend me a link e.g.(https://www.instagram.com/amro045/)\n"
+			  )
+	bot.sendMessage(chat_id=update.message.chat_id, text=Message)
+	SaveUserInformation(bot, update)
 	
 	
 start_handler = CommandHandler('start', start)
