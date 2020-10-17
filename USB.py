@@ -15,8 +15,8 @@ from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
 
 
-TOKEN		=		"<BOT TOKEN>" # Your Bot Token Here
-updater 	= 		Updater(token=TOKEN)
+TOKEN		=		"1306570614:AAE7tbo7STwFiaXEcpZJ44kNeUEvc3usGV8" # Your Bot Token Here
+updater 	= 		Updater(token=1306570614:AAE7tbo7STwFiaXEcpZJ44kNeUEvc3usGV8)
 dispatcher 	= 		updater.dispatcher
 
 def UrlValidator(url):
